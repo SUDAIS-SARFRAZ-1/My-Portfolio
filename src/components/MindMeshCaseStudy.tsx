@@ -14,14 +14,32 @@ import {
   ArrowDown,
   Info,
   Laptop,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { GithubIcon } from "@/components/icons/SocialIcons";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import SpotlightCard from "@/components/SpotlightCard";
 
+type Slide = { src: string; alt: string };
+
 export default function MindMeshCaseStudy() {
   const mindmesh = projectsData.find((p) => p.id === "mindmesh");
   const [selectedNode, setSelectedNode] = useState<string>("backend");
+
+  const screenshots: Slide[] = [
+    { src: "/images/mindmesh-2.jpg", alt: "MindMesh project overview dashboard" },
+    { src: "/images/mindmesh-3.jpg", alt: "MindMesh meeting intelligence audio upload" },
+    { src: "/images/mindmesh-4.jpg", alt: "MindMesh AI document parsing pipeline" },
+    { src: "/images/mindmesh-5.jpg", alt: "MindMesh generated backlog review and edit" },
+    { src: "/images/mindmesh-6.jpg", alt: "MindMesh sprint planning kanban board" },
+  ];
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const goToPrevSlide = () =>
+    setSlideIndex((i) => (i - 1 + screenshots.length) % screenshots.length);
+  const goToNextSlide = () =>
+    setSlideIndex((i) => (i + 1) % screenshots.length);
 
   if (!mindmesh) return null;
 
@@ -138,14 +156,55 @@ export default function MindMeshCaseStudy() {
             </div>
           </div>
 
-          <div className="relative aspect-video w-full rounded-2xl overflow-hidden mt-2 bg-slate-950">
-            <Image
-              src="/images/mindmesh.jpg"
-              alt="MindMesh Multi-Agent Dashboard Mockup"
-              fill
-              sizes="(max-width: 1280px) 100vw, 1200px"
-              className="object-cover object-top hover:scale-[1.01] transition-transform duration-500"
-            />
+          <div className="relative aspect-video w-full rounded-2xl overflow-hidden mt-2 bg-slate-950 group">
+            {screenshots.map((shot, idx) => (
+              <Image
+                key={shot.src}
+                src={shot.src}
+                alt={shot.alt}
+                fill
+                sizes="(max-width: 1280px) 100vw, 1200px"
+                quality={100}
+                className={`object-contain transition-opacity duration-500 ${
+                  idx === slideIndex ? "opacity-100" : "opacity-0 pointer-events-none"
+                }`}
+                priority={idx === 0}
+              />
+            ))}
+
+            {/* Prev / Next controls — click only, no autoplay */}
+            <button
+              type="button"
+              onClick={goToPrevSlide}
+              aria-label="Previous screenshot"
+              className="btn-tactile absolute left-3 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-slate-900/70 text-white border border-white/10 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              type="button"
+              onClick={goToNextSlide}
+              aria-label="Next screenshot"
+              className="btn-tactile absolute right-3 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-slate-900/70 text-white border border-white/10 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+
+            {/* Slide indicators */}
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex items-center gap-1.5">
+              {screenshots.map((shot, idx) => (
+                <button
+                  key={shot.src}
+                  type="button"
+                  onClick={() => setSlideIndex(idx)}
+                  aria-label={`Go to screenshot ${idx + 1}`}
+                  aria-current={idx === slideIndex}
+                  className={`btn-tactile h-1.5 rounded-full transition-all ${
+                    idx === slideIndex ? "w-5 bg-indigo-400" : "w-1.5 bg-white/40 hover:bg-white/60"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </Reveal>
 

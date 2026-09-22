@@ -10,8 +10,8 @@ export default function ProjectGrid() {
   const otherProjects = projectsData.filter((p) => !p.isFlagship);
 
   const projectImages: Record<string, string> = {
-    moviemania: "/images/moviemania.jpg",
-    "finance-tracker": "/images/financetracker.jpg",
+    moviemania: "/images/moviemania.png",
+    organicstore: "/images/organicstore.png",
   };
 
   return (

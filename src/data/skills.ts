@@ -6,22 +6,28 @@ export interface SkillGroup {
 
 export const skillsData: SkillGroup[] = [
   {
+    category: "Languages",
+    description: "Core programming languages across the stack.",
+    skills: ["JavaScript (ES6+)", "TypeScript", "C++", "Java", "SQL", "HTML5", "CSS3"],
+  },
+  {
     category: "Frontend",
     description: "Modern, performant, and accessible interfaces.",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"],
+    skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap", "React Router"],
   },
   {
     category: "State & Data Fetching",
     description: "Predictable client and server state synchronization.",
-    skills: ["Zustand", "React Query"],
+    skills: ["Zustand", "TanStack React Query"],
   },
   {
     category: "Backend",
     description: "Robust, secure, and production-tested API architectures.",
     skills: [
       "Node.js",
-      "Express",
+      "Express.js",
       "REST APIs",
+      "MVC",
       "Authentication (JWT)",
       "Authorization / RBAC",
       "WebSockets",
@@ -32,27 +38,23 @@ export const skillsData: SkillGroup[] = [
   {
     category: "Databases",
     description: "Relational integrity, flexible document stores, and caching.",
-    skills: ["PostgreSQL", "MongoDB", "Redis"],
-  },
-  {
-    category: "ORM & Infrastructure",
-    description: "Database modeling, migrations, and serverless backends.",
-    skills: ["Prisma", "Supabase", "Neon"],
+    skills: ["MongoDB", "PostgreSQL", "MySQL", "Mongoose", "Prisma", "Redis", "Supabase", "Neon"],
   },
   {
     category: "DevOps & Deployment",
     description: "Repeatable containerization and continuous integration.",
-    skills: ["Docker", "Git", "GitHub", "GitHub Actions (CI/CD)", "Vercel", "Render"],
+    skills: ["Docker", "Docker Compose", "GitHub Actions (CI/CD)", "Git", "GitHub", "Vercel", "Render"],
   },
   {
     category: "AI Integration",
     description: "Product-level artificial intelligence workflows.",
     skills: [
-      "LLM APIs",
-      "AI Agents",
-      "Speech-to-Text",
+      "OpenAI API",
       "OpenAI Whisper",
-      "AI-Assisted Application Workflows",
+      "LLM Integration",
+      "Prompt Engineering",
+      "AI Agents",
+      "Postman",
     ],
   },
 ];

@@ -10,17 +10,14 @@ import {
   Building2,
   MapPin,
   Sparkles,
-  Cpu,
-  Database,
-  Mic,
-  Volume2,
-  Play,
+  Rocket,
   Zap,
   ChevronDown,
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from "@/components/icons/SocialIcons";
 import { profileData } from "@/data/profile";
 import SpotlightCard from "@/components/SpotlightCard";
+import EngineeringStatusMockup from "@/components/EngineeringStatusMockup";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -63,7 +60,6 @@ function BuildingLine() {
 }
 
 export default function Hero() {
-  const [isSimulatingWave, setIsSimulatingWave] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
   const container: Variants = {
@@ -95,7 +91,7 @@ export default function Hero() {
             <motion.div variants={item} className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 border border-indigo-200 text-indigo-700 shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-                <span>AI Full Stack Developer</span>
+                <span>Software Engineer</span>
               </span>
 
               {/* Founder callout chip */}
@@ -114,12 +110,17 @@ export default function Hero() {
                 {profileData.name} • PORTFOLIO
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
-                Architecting Production{" "}
+                Software Engineer &{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-[length:200%_auto] animate-[techShimmer_6s_linear_infinite]">
-                  Full-Stack Systems
-                </span>{" "}
-                & Multi-Agent AI.
+                  AI Full-Stack Developer
+                </span>
+                .
               </h1>
+              <p className="flex flex-wrap items-center gap-2.5 text-sm sm:text-base font-mono font-semibold text-indigo-700">
+                <span>Backend Architecture</span>
+                <span className="text-slate-300">|</span>
+                <span>Multi-Agent AI</span>
+              </p>
               <BuildingLine />
             </motion.div>
 
@@ -146,7 +147,7 @@ export default function Hero() {
             <motion.div variants={item} className="flex flex-wrap items-center gap-3 pt-2">
               <a
                 href={profileData.resumeUrl}
-                download="Sheikh-Sudais-Resume.pdf"
+                download="Sudais-Sarfraz-Resume.pdf"
                 className="btn-tactile inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-lg shadow-indigo-600/30 transition-all focus-visible:ring-2 focus-visible:ring-indigo-400"
                 id="hero-resume-cta"
               >
@@ -193,6 +194,15 @@ export default function Hero() {
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
+              <a
+                href={profileData.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-white border border-slate-200 hover:text-emerald-600 hover:border-emerald-300 transition-all shadow-sm"
+                aria-label="Chat on WhatsApp"
+              >
+                <WhatsappIcon className="w-4 h-4" />
+              </a>
             </motion.div>
           </motion.div>
 
@@ -216,99 +226,17 @@ export default function Hero() {
 
             <div className="absolute -bottom-4 -right-2 z-20 p-3 rounded-xl bg-slate-900/90 backdrop-blur-md border border-white/10 shadow-xl flex items-center gap-2.5 animate-float-slow" style={{ animationDelay: "2s" }}>
               <div className="w-7 h-7 rounded-lg bg-indigo-950/60 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
-                <Cpu className="w-3.5 h-3.5" />
+                <Rocket className="w-3.5 h-3.5" />
               </div>
               <div className="text-left">
-                <div className="text-[11px] font-bold text-slate-200">MindMesh Engine</div>
-                <div className="text-[9px] font-mono text-indigo-400 font-semibold">4 Autonomous Agents</div>
+                <div className="text-[11px] font-bold text-slate-200">3 Production Apps</div>
+                <div className="text-[9px] font-mono text-indigo-400 font-semibold">Shipped & Deployed</div>
               </div>
             </div>
 
             {/* Central Interactive Tech Card */}
-            <SpotlightCard className="tech-terminal-panel rounded-3xl p-6 shadow-2xl space-y-5" tiltStrength={6}>
-              {/* Card Header */}
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                  <span className="ml-2 text-xs font-mono font-semibold text-slate-400">
-                    system-architecture://mindmesh
-                  </span>
-                </div>
-                <span className="text-[10px] font-mono font-bold text-indigo-300 bg-indigo-950/80 px-2 py-0.5 rounded-md border border-indigo-500/30">
-                  LIVE PIPELINE
-                </span>
-              </div>
-
-              {/* Visual Interactive Pipeline Nodes */}
-              <div className="space-y-3">
-                {/* Node 1: Input & Whisper Audio */}
-                <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <div className="p-2 rounded-lg bg-cyan-950/60 text-cyan-400 border border-cyan-500/30">
-                      <Mic className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-200">Meeting Audio Stream</div>
-                      <div className="text-[10px] font-mono text-slate-400">Whisper 16kHz Speech Ingestion</div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => setIsSimulatingWave(!isSimulatingWave)}
-                    type="button"
-                    className="btn-tactile inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono font-semibold bg-slate-900 hover:bg-slate-800 text-indigo-300 border border-indigo-500/30 rounded-lg shadow-sm transition-colors"
-                  >
-                    {isSimulatingWave ? <Volume2 className="w-3 h-3 text-emerald-400" /> : <Play className="w-3 h-3 text-indigo-400" />}
-                    <span>{isSimulatingWave ? "Streaming" : "Simulate"}</span>
-                  </button>
-                </div>
-
-                {/* Simulated Audio Waveform */}
-                <div className="h-8 flex items-center justify-between gap-1 px-3 py-1.5 bg-slate-950/40 rounded-xl border border-slate-800/50">
-                  {[40, 75, 30, 90, 60, 100, 45, 80, 55, 95, 70, 35, 85, 60, 40].map((val, idx) => (
-                    <div
-                      key={idx}
-                      className={`w-1 rounded-full transition-all duration-200 ${
-                        isSimulatingWave ? "bg-indigo-400 animate-pulse" : "bg-slate-700"
-                      }`}
-                      style={{ height: isSimulatingWave ? `${Math.max(25, (val + idx * 6) % 100)}%` : "30%" }}
-                    />
-                  ))}
-                </div>
-
-                {/* Node 2: Multi-Agent Router */}
-                <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <div className="p-2 rounded-lg bg-indigo-950/60 text-indigo-400 border border-indigo-500/30">
-                      <Cpu className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-200">Multi-Agent Event Bus</div>
-                      <div className="text-[10px] font-mono text-slate-400">Sprint Decomposer & Task Engine</div>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-mono text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">
-                    Active
-                  </span>
-                </div>
-
-                {/* Node 3: Hybrid Persistence */}
-                <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <div className="p-2 rounded-lg bg-emerald-950/60 text-emerald-400 border border-emerald-500/30">
-                      <Database className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-200">Hybrid Persistence Layer</div>
-                      <div className="text-[10px] font-mono text-slate-400">MongoDB (State) + PostgreSQL (ACID)</div>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-mono text-indigo-400 font-bold bg-indigo-950/60 px-2 py-0.5 rounded border border-indigo-500/30">
-                    Synced
-                  </span>
-                </div>
-              </div>
+            <SpotlightCard className="tech-terminal-panel rounded-3xl overflow-hidden shadow-2xl" tiltStrength={6}>
+              <EngineeringStatusMockup />
             </SpotlightCard>
           </motion.div>
         </div>

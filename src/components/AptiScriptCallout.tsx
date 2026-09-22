@@ -50,7 +50,7 @@ export default function AptiScriptCallout() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
                   <span className="text-xs font-mono font-bold text-slate-900 uppercase">
-                    Hire Sheikh Sudais (Solo)
+                    Hire Sudais Sarfraz (Solo)
                   </span>
                   <p className="text-xs text-slate-500 leading-relaxed">
                     For high-impact AI Full Stack, backend architecture, multi-agent systems, or full-time roles.

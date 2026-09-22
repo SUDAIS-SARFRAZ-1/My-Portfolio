@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sheikh Sudais | AI Full Stack Developer & Founder",
+  title: "Sudais Sarfraz | AI Full Stack Developer & Founder",
   description:
-    "Personal portfolio of Sheikh Sudais — AI Full Stack Developer at Devline Solutions and Founder of AptiScript Technologies. Building multi-agent systems, Next.js applications, and resilient cloud backends.",
+    "Personal portfolio of Sudais Sarfraz — AI Full Stack Developer at Devline Solutions and Founder of AptiScript Technologies. Building multi-agent systems, Next.js applications, and resilient cloud backends.",
   keywords: [
-    "Sheikh Sudais",
+    "Sudais Sarfraz",
     "AI Full Stack Developer",
     "MERN Developer Lahore",
     "Multi-Agent AI Systems",
@@ -29,20 +29,20 @@ export const metadata: Metadata = {
     "MindMesh",
     "Software Engineer Pakistan",
   ],
-  authors: [{ name: "Sheikh Sudais" }],
-  creator: "Sheikh Sudais",
+  authors: [{ name: "Sudais Sarfraz" }],
+  creator: "Sudais Sarfraz",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://sheikhsudais.dev",
-    title: "Sheikh Sudais | AI Full Stack Developer & Founder",
+    title: "Sudais Sarfraz | AI Full Stack Developer & Founder",
     description:
-      "Explore the portfolio of Sheikh Sudais — AI Full Stack Developer & Founder of AptiScript Technologies. Flagship multi-agent architecture, enterprise MERN, and production AI.",
-    siteName: "Sheikh Sudais Portfolio",
+      "Explore the portfolio of Sudais Sarfraz — AI Full Stack Developer & Founder of AptiScript Technologies. Flagship multi-agent architecture, enterprise MERN, and production AI.",
+    siteName: "Sudais Sarfraz Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sheikh Sudais | AI Full Stack Developer & Founder",
+    title: "Sudais Sarfraz | AI Full Stack Developer & Founder",
     description:
       "AI Full Stack Developer & Founder of AptiScript Technologies. Specialized in multi-agent orchestration and high-scale web engineering.",
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Sheikh Sudais",
+  name: "Sudais Sarfraz",
   jobTitle: "AI Full Stack Developer",
   worksFor: {
     "@type": "Organization",
@@ -72,8 +72,8 @@ const jsonLd = {
   },
   url: "https://sheikhsudais.dev",
   sameAs: [
-    "https://github.com/Sudais-Sarfraz",
-    "https://linkedin.com/in/sheikh-sudais",
+    "https://github.com/SUDAIS-SARFRAZ-1",
+    "https://www.linkedin.com/in/sudais-sarfraz/",
   ],
   knowsAbout: [
     "Artificial Intelligence",

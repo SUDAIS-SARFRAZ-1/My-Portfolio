@@ -27,14 +27,14 @@ export const projectsData: Project[] = [
     problem:
       "Engineering teams lose critical time deciphering unstructured meeting notes, coordinating action items across disconnected tools, and manually drafting sprint backlogs.",
     solution:
-      "MindMesh automates requirement extraction and meeting intelligence using an AI pipeline that transcribes voice via Whisper, extracts consensus decisions via LLMs, and populates structured sprint deliverables into Jira and GitHub.",
+      "Led backend development on MindMesh, designing REST APIs, JWT authentication, RBAC, multi-project management, and WebSocket notifications, with 4 AI agents automating requirement extraction and meeting intelligence: transcribing voice via Whisper, extracting consensus decisions via LLMs, and populating structured sprint deliverables into Jira and GitHub.",
     features: [
-      "Requirement Understanding & Decomposition",
-      "Meeting Intelligence with OpenAI Whisper",
-      "Automated Sprint & Agile Artifact Generation",
+      "Led backend development integrating LLMs and OpenAI Whisper",
+      "REST APIs, JWT authentication, RBAC, and multi-project management",
+      "4 AI agents for project management, outreach, meeting intelligence, and analytics",
+      "Meeting recordings converted into transcriptions, summaries, tasks, and sprint planning artifacts",
       "Hybrid Persistence: MongoDB for AI memory + PostgreSQL for sprint integrity",
       "Real-time event updates via WebSockets (Socket.io)",
-      "Role-Based Access Control (RBAC) & JWT Security",
     ],
     techStack: [
       "React / Next.js",
@@ -48,8 +48,43 @@ export const projectsData: Project[] = [
       "Docker",
       "CI/CD",
     ],
-    demoUrl: "https://mindmesh.dev",
-    repoUrl: "https://github.com/Sudais-Sarfraz/MindMesh",
+    repoUrl: "https://github.com/SUDAIS-SARFRAZ-1/MindMesh",
+  },
+  {
+    id: "organicstore",
+    title: "Organic Store E-Commerce",
+    subtitle: "Full-Stack Organic Grocery E-Commerce Platform",
+    category: "Full-Stack Web App",
+    type: "Full-Stack E-Commerce Platform",
+    isFlagship: false,
+    description:
+      "A complete organic grocery shopping platform featuring a modern customer storefront, secure authentication, product management, shopping cart functionality, and an administrative dashboard for managing e-commerce operations.",
+    problem:
+      "Organic grocery shoppers need reliable category filtering, fast search, and a trustworthy checkout flow, while store operators need a single dashboard to manage products, orders, and users without friction.",
+    solution:
+      "Built a RESTful Node.js/Express/MongoDB backend paired with a React storefront using Zustand for global state and TanStack React Query for API caching, mutations, and server-state synchronization, backed by JWT auth with role-based access control.",
+    features: [
+      "Product browsing with category filtering and search",
+      "Organic grocery catalog with detailed product information",
+      "Secure authentication with JWT and role-based access control (RBAC)",
+      "Shopping cart management and checkout workflow",
+      "Payment checkout integration",
+      "Order management and purchase tracking",
+      "Customer account management",
+      "Admin dashboard for product, order, and user management",
+    ],
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Zustand",
+      "TanStack React Query",
+      "REST API",
+    ],
+    demoUrl: "https://organic-store-liart.vercel.app/",
+    repoUrl: "https://github.com/SUDAIS-SARFRAZ-1/OrganicStore",
   },
   {
     id: "moviemania",
@@ -59,66 +94,23 @@ export const projectsData: Project[] = [
     type: "Full-Stack Entertainment Discovery App",
     isFlagship: false,
     description:
-      "A complete movie and TV discovery application featuring instant search, live trailers, comprehensive cast information, and authenticated watchlist curation.",
+      "A complete movie and TV discovery application featuring instant search, category-based browsing, detailed entertainment information, trailers, and authenticated watchlist management powered by the TMDB API.",
     problem:
       "Users face friction finding reliable streaming info and saving watchlist recommendations across fragmented entertainment databases.",
     solution:
-      "Built an optimized single-page interface integrated with TMDB REST APIs, JWT authentication, and MongoDB persistence for personalized watchlists and user ratings.",
+      "Built an optimized React interface integrated with the TMDB REST API, JWT authentication, and MongoDB-backed watchlist CRUD, deployed with a Vercel frontend and Render backend.",
     features: [
-      "Movie & TV discovery with category filtering",
-      "Sub-second search & browsing across TMDB catalog",
-      "Detailed film overviews, trailers, and cast credits",
-      "Authenticated user watchlists with JWT sessions",
-      "Responsive UI built with React & Tailwind CSS",
+      "Movie and TV discovery with category filtering",
+      "Instant movie and TV search powered by the TMDB API",
+      "Detailed movie and TV show pages with overviews and trailers",
+      "Comprehensive cast and production company information",
+      "TV show seasons and episode details",
+      "JWT-based user authentication and authorization",
+      "Personalized watchlist creation and management",
+      "MongoDB-backed watchlist CRUD operations",
     ],
-    techStack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "TMDB API", "Vercel", "Render"],
-    demoUrl: "https://moviemania-showcase.vercel.app",
-    repoUrl: "https://github.com/Sudais-Sarfraz/MovieMania",
-  },
-  {
-    id: "finance-tracker",
-    title: "Finance Tracker API",
-    subtitle: "Personal Finance & Expense Ledger REST API",
-    category: "Backend & REST APIs",
-    type: "Personal Finance REST API",
-    isFlagship: false,
-    description:
-      "A secure personal finance API built with Node.js and Express to record multi-currency transactions, manage monthly savings goals, and track initial balances.",
-    problem:
-      "Personal budgeting applications demand strict input validation, reliable balance calculation, and secure route protection to prevent financial record leakage.",
-    solution:
-      "Architected a robust Express/MongoDB REST API featuring JWT authentication, protected endpoints, atomic expense calculation, and financial goal tracking.",
-    features: [
-      "Secure user authentication with JWT tokens",
-      "Expense tracking and categorization endpoints",
-      "Financial savings goal tracking with status alerts",
-      "Initial balance reconciliation and ledger queries",
-      "Strict route authorization and input validation",
-    ],
-    techStack: ["Node.js", "Express", "MongoDB", "JWT", "REST API", "HTML/CSS/JavaScript"],
-    repoUrl: "https://github.com/Sudais-Sarfraz/Finance-Tracker-API",
-  },
-  {
-    id: "fitverse",
-    title: "FitVerse",
-    subtitle: "Athletic Gear & E-Commerce Affiliate Platform",
-    category: "E-Commerce & Frontend",
-    type: "E-Commerce / Affiliate Platform",
-    isFlagship: false,
-    description:
-      "A responsive storefront designed for athletic apparel and fitness accessories, optimized for product browsing speed, high conversion, and clean navigation.",
-    problem:
-      "High bounce rates in e-commerce often result from cluttered navigation, slow catalog rendering, and poor mobile checkout flows.",
-    solution:
-      "Developed a clean, fast-loading storefront with category filtering, responsive product viewports, and streamlined affiliate conversion paths.",
-    features: [
-      "Dynamic athletic catalog and category filtering",
-      "High-speed image delivery and mobile-first responsiveness",
-      "Product showcase with specifications and variant views",
-      "Optimized affiliate tracking pathways",
-    ],
-    techStack: ["Next.js", "React", "Tailwind CSS", "Zustand", "Responsive UI"],
-    demoUrl: "https://fitverse-store.vercel.app",
-    repoUrl: "https://github.com/Sudais-Sarfraz/FitVerse",
+    techStack: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT", "TMDB API", "Vercel", "Render"],
+    demoUrl: "https://movie-mania-roan.vercel.app/home",
+    repoUrl: "https://github.com/SUDAIS-SARFRAZ-1/MovieMania",
   },
 ];

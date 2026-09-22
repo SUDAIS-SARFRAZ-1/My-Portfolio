@@ -11,6 +11,8 @@ export interface Profile {
   };
   location: string;
   email: string;
+  phone: string;
+  whatsapp: string;
   github: string;
   linkedin: string;
   resumeUrl: string;
@@ -19,7 +21,7 @@ export interface Profile {
 }
 
 export const profileData: Profile = {
-  name: "Sheikh Sudais",
+  name: "Sudais Sarfraz",
   role: "AI Full Stack Developer",
   subRole: "Software Engineer • Full-Stack & Backend Systems",
   company: "Devline Solutions",
@@ -30,11 +32,13 @@ export const profileData: Profile = {
     url: "https://aptiscript.com",
   },
   location: "Lahore, Pakistan",
-  email: "contact.sudais1@gmail.com",
-  github: "https://github.com/Sudais-Sarfraz",
-  linkedin: "https://linkedin.com/in/sheikh-sudais",
+  email: "sudais.sarfraz.1@gmail.com",
+  phone: "+92 301-9492010",
+  whatsapp: "https://wa.me/923019492010",
+  github: "https://github.com/SUDAIS-SARFRAZ-1",
+  linkedin: "https://www.linkedin.com/in/sudais-sarfraz/",
   resumeUrl: "/resume.pdf",
   summary:
-    "Software engineer focused on building production-oriented full-stack applications, backend systems, DevOps workflows, and AI-integrated products. Currently working as an AI Full Stack Developer at Devline Solutions, while building AptiScript Technologies.",
+    "Software Engineer experienced in building and deploying scalable web applications using MERN, with a strong focus on backend development, REST APIs, authentication, RBAC, databases, Docker, and CI/CD. Experienced in delivering end-to-end applications, including e-commerce and AI-integrated systems.",
   availability: "Available for Software Engineering & AI Full-Stack Roles",
 };

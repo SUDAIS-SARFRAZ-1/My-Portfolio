@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Code2, Mail, FileDown } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from "@/components/icons/SocialIcons";
 import { profileData } from "@/data/profile";
 
 export default function Footer() {
@@ -55,7 +55,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <a
               href={profileData.resumeUrl}
-              download="Sheikh-Sudais-Resume.pdf"
+              download="Sudais-Sarfraz-Resume.pdf"
               className="btn-tactile inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-700 transition-colors"
             >
               <FileDown className="w-4 h-4" />
@@ -80,6 +80,15 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon className="w-4 h-4" />
+              </a>
+              <a
+                href={profileData.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-tactile p-2 rounded-lg text-slate-500 hover:text-emerald-600 hover:bg-slate-100 transition-colors"
+                aria-label="Chat on WhatsApp"
+              >
+                <WhatsappIcon className="w-4 h-4" />
               </a>
               <a
                 href={`mailto:${profileData.email}`}

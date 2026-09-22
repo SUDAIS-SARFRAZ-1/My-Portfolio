@@ -57,7 +57,7 @@ export default function Navbar() {
         <Link
           href="#"
           className="flex items-center gap-2.5 group focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-full"
-          aria-label="Sheikh Sudais - Home"
+          aria-label="Sudais Sarfraz - Home"
         >
           <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
             <Code2 className="w-4 h-4" />
@@ -103,7 +103,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href={profileData.resumeUrl}
-            download="Sheikh-Sudais-Resume.pdf"
+            download="Sudais-Sarfraz-Resume.pdf"
             className="btn-tactile inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-full shadow-md shadow-indigo-600/30 transition-all focus-visible:ring-2 focus-visible:ring-indigo-400"
             aria-label="Download Resume PDF"
           >
@@ -151,7 +151,7 @@ export default function Navbar() {
           <div className="pt-2 border-t border-slate-200">
             <a
               href={profileData.resumeUrl}
-              download="Sheikh-Sudais-Resume.pdf"
+              download="Sudais-Sarfraz-Resume.pdf"
               onClick={() => setIsOpen(false)}
               className="btn-tactile w-full flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-lg shadow-indigo-600/30"
             >

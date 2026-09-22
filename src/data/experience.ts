@@ -13,21 +13,21 @@ export interface Experience {
 export const experienceData: Experience[] = [
   {
     company: "Devline Solutions",
-    role: "AI Full Stack Developer",
-    period: "2024 — Present",
+    role: "Full Stack Intern",
+    period: "Present",
     location: "Lahore, Pakistan",
     isCurrent: true,
     type: "Full-Time Role",
     summary:
-      "Developing production full-stack web applications, architecting backend REST APIs, and integrating practical AI/LLM functionality into client-facing platforms.",
+      "Completed a full-stack development roadmap covering React, Node.js, Express.js, REST APIs, SQL, databases, authentication, RBAC, state management, and DevOps, then shipped a complete e-commerce application end-to-end.",
     responsibilities: [
-      "Develop end-to-end web applications with Next.js (App Router), React, and TypeScript.",
-      "Design and maintain scalable Node.js/Express backend APIs, database schemas, and data pipelines.",
-      "Integrate Large Language Model (LLM) workflows and OpenAI Whisper speech-to-text into business applications.",
-      "Implement secure authentication, role-based access control (RBAC), and session management.",
-      "Configure Docker containers and GitHub Actions CI/CD pipelines for automated testing and deployment.",
+      "Completed a full-stack development roadmap covering React, Node.js, Express.js, REST APIs, SQL, databases, authentication, RBAC, state management, and DevOps.",
+      "Developed a complete e-commerce application with customer interface, admin dashboard, authentication, RBAC, cart, and payment checkout.",
+      "Implemented Zustand for client-side state management and TanStack React Query for API caching, mutations, loading, error handling, and server-state synchronization.",
+      "Built backend APIs using Node.js, Express.js, and REST architecture with authentication and role-based authorization.",
+      "Applied Git/GitHub workflows and development practices throughout project implementation.",
     ],
-    technologies: ["Next.js", "React", "TypeScript", "Node.js", "Express", "PostgreSQL", "MongoDB", "AI / LLMs", "Docker"],
+    technologies: ["React", "Node.js", "Express.js", "REST APIs", "SQL", "JWT", "RBAC", "Zustand", "TanStack React Query", "Git / GitHub"],
   },
   {
     company: "AptiScript Technologies",
