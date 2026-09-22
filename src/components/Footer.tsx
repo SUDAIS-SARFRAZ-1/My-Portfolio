@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/5 bg-[#060913]/95 py-14 text-slate-400 text-sm backdrop-blur-md">
+    <footer className="border-t border-slate-200 bg-white/80 py-14 text-slate-500 text-sm backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Identity & Current Role */}
@@ -16,8 +16,8 @@ export default function Footer() {
               <Code2 className="w-4 h-4" />
             </div>
             <div>
-              <div className="text-white font-bold">{profileData.name}</div>
-              <div className="text-xs text-slate-400 font-medium">
+              <div className="text-slate-900 font-bold">{profileData.name}</div>
+              <div className="text-xs text-slate-500 font-medium">
                 {profileData.role} • {profileData.location}
               </div>
             </div>
@@ -25,28 +25,28 @@ export default function Footer() {
 
           {/* Quick Nav Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-medium">
-            <Link href="#about" className="hover:text-indigo-400 transition-colors">
+            <Link href="#about" className="hover:text-indigo-600 transition-colors">
               About
             </Link>
-            <Link href="#experience" className="hover:text-indigo-400 transition-colors">
+            <Link href="#experience" className="hover:text-indigo-600 transition-colors">
               Experience
             </Link>
-            <Link href="#mindmesh" className="hover:text-indigo-400 transition-colors">
+            <Link href="#mindmesh" className="hover:text-indigo-600 transition-colors">
               MindMesh
             </Link>
-            <Link href="#projects" className="hover:text-indigo-400 transition-colors">
+            <Link href="#projects" className="hover:text-indigo-600 transition-colors">
               Projects
             </Link>
-            <Link href="#skills" className="hover:text-indigo-400 transition-colors">
+            <Link href="#skills" className="hover:text-indigo-600 transition-colors">
               Skills
             </Link>
-            <Link href="#approach" className="hover:text-indigo-400 transition-colors">
+            <Link href="#approach" className="hover:text-indigo-600 transition-colors">
               Approach
             </Link>
-            <Link href="#aptiscript" className="hover:text-indigo-400 transition-colors">
+            <Link href="#aptiscript" className="hover:text-indigo-600 transition-colors">
               AptiScript
             </Link>
-            <Link href="#contact" className="hover:text-indigo-400 transition-colors">
+            <Link href="#contact" className="hover:text-indigo-600 transition-colors">
               Contact
             </Link>
           </div>
@@ -56,7 +56,7 @@ export default function Footer() {
             <a
               href={profileData.resumeUrl}
               download="Sheikh-Sudais-Resume.pdf"
-              className="btn-tactile inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition-colors"
+              className="btn-tactile inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-700 transition-colors"
             >
               <FileDown className="w-4 h-4" />
               <span>Resume PDF</span>
@@ -67,7 +67,7 @@ export default function Footer() {
                 href={profileData.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-tactile p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                className="btn-tactile p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors"
                 aria-label="GitHub"
               >
                 <GithubIcon className="w-4 h-4" />
@@ -76,14 +76,14 @@ export default function Footer() {
                 href={profileData.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-tactile p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                className="btn-tactile p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
               <a
                 href={`mailto:${profileData.email}`}
-                className="btn-tactile p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                className="btn-tactile p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors"
                 aria-label="Email"
               >
                 <Mail className="w-4 h-4" />
@@ -93,12 +93,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright & Tech Note */}
-        <div className="mt-8 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="mt-8 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
             © {currentYear} {profileData.name}. All rights reserved.
           </div>
-          <div className="font-mono text-[11px] text-slate-500">
-            Next.js 15 App Router · TypeScript · Taste Design Dark System
+          <div className="font-mono text-[11px] text-slate-400">
+            Next.js · TypeScript · Framer Motion
           </div>
         </div>
       </div>

@@ -66,12 +66,12 @@ export default function InteractiveTechBackground() {
     let height = 0;
     let dpr = 1;
 
-    // Palette of neural synaptic colors
+    // Palette of neural synaptic colors, tuned for a light backdrop
     const nodeColors = [
-      { fill: "#818cf8", glow: "rgba(129, 140, 248, 0.6)" }, // Indigo
-      { fill: "#38bdf8", glow: "rgba(56, 189, 248, 0.6)" },  // Cyan
-      { fill: "#a78bfa", glow: "rgba(167, 139, 250, 0.5)" }, // Violet
-      { fill: "#34d399", glow: "rgba(52, 211, 153, 0.5)" },  // Emerald
+      { fill: "#6366f1", glow: "rgba(99, 102, 241, 0.35)" }, // Indigo
+      { fill: "#0891b2", glow: "rgba(8, 145, 178, 0.3)" },   // Cyan
+      { fill: "#7c3aed", glow: "rgba(124, 58, 237, 0.28)" }, // Violet
+      { fill: "#059669", glow: "rgba(5, 150, 105, 0.28)" },  // Emerald
     ];
 
     let nodes: Node[] = [];
@@ -199,10 +199,10 @@ export default function InteractiveTechBackground() {
         ctx.save();
         ctx.beginPath();
         ctx.arc(sw.x, sw.y, sw.radius, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(99, 102, 241, ${sw.alpha * 0.45})`;
+        ctx.strokeStyle = `rgba(79, 70, 229, ${sw.alpha * 0.3})`;
         ctx.lineWidth = 2;
-        ctx.shadowColor = "#38bdf8";
-        ctx.shadowBlur = 10;
+        ctx.shadowColor = "#0891b2";
+        ctx.shadowBlur = 8;
         ctx.stroke();
         ctx.restore();
       }
@@ -265,12 +265,12 @@ export default function InteractiveTechBackground() {
           const dist = Math.hypot(dx, dy);
 
           if (dist < connectionDistance) {
-            const alpha = (1 - dist / connectionDistance) * 0.35 * Math.min(nodeA.layer, nodeB.layer);
+            const alpha = (1 - dist / connectionDistance) * 0.16 * Math.min(nodeA.layer, nodeB.layer);
 
             ctx.beginPath();
             ctx.moveTo(nodeA.x, nodeA.y);
             ctx.lineTo(nodeB.x, nodeB.y);
-            ctx.strokeStyle = `rgba(99, 102, 241, ${alpha})`;
+            ctx.strokeStyle = `rgba(79, 70, 229, ${alpha})`;
             ctx.lineWidth = 1;
             ctx.stroke();
 
@@ -285,11 +285,11 @@ export default function InteractiveTechBackground() {
           const dist = Math.hypot(dx, dy);
 
           if (dist < mouseRadius) {
-            const alpha = (1 - dist / mouseRadius) * 0.45;
+            const alpha = (1 - dist / mouseRadius) * 0.25;
             ctx.beginPath();
             ctx.moveTo(nodeA.x, nodeA.y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(56, 189, 248, ${alpha})`;
+            ctx.strokeStyle = `rgba(8, 145, 178, ${alpha})`;
             ctx.lineWidth = 1.2;
             ctx.stroke();
           }
@@ -304,7 +304,7 @@ export default function InteractiveTechBackground() {
           toNode: conn.j,
           progress: 0,
           speed: 0.015 + Math.random() * 0.02,
-          color: Math.random() > 0.5 ? "#38bdf8" : "#818cf8",
+          color: Math.random() > 0.5 ? "#0891b2" : "#6366f1",
         });
       }
 
@@ -377,25 +377,25 @@ export default function InteractiveTechBackground() {
       aria-hidden="true"
       className="fixed inset-0 pointer-events-none -z-20 overflow-hidden select-none"
     >
-      {/* 1. Deep Obsidian Solid Canvas Base */}
-      <div className="absolute inset-0 bg-[#060913]" />
+      {/* 1. Soft Light Canvas Base */}
+      <div className="absolute inset-0 bg-[#f6f7fb]" />
 
       {/* 2. Dynamic Ambient Aurora Spheres (Slow floating glows) */}
       <motion.div
         style={{ y: orb1Y }}
-        className="absolute -top-40 -left-40 w-[680px] h-[680px] rounded-full blur-[140px] bg-indigo-600/12 pointer-events-none"
+        className="absolute -top-40 -left-40 w-[680px] h-[680px] rounded-full blur-[140px] bg-indigo-400/15 pointer-events-none"
       />
       <motion.div
         style={{ y: orb2Y }}
-        className="absolute top-1/3 -right-48 w-[720px] h-[720px] rounded-full blur-[160px] bg-cyan-600/10 pointer-events-none"
+        className="absolute top-1/3 -right-48 w-[720px] h-[720px] rounded-full blur-[160px] bg-cyan-400/12 pointer-events-none"
       />
       <motion.div
         style={{ y: orb3Y }}
-        className="absolute bottom-20 left-1/4 w-[650px] h-[650px] rounded-full blur-[150px] bg-purple-600/10 pointer-events-none"
+        className="absolute bottom-20 left-1/4 w-[650px] h-[650px] rounded-full blur-[150px] bg-purple-400/12 pointer-events-none"
       />
 
       {/* 3. Subtle Cybernetic Coordinate Grid Overlay */}
-      <div className="absolute inset-0 bg-tech-grid opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 bg-tech-grid opacity-60 pointer-events-none" />
 
       {/* 4. Interactive Neural Constellation & Particle Mesh Canvas */}
       <canvas
@@ -408,14 +408,14 @@ export default function InteractiveTechBackground() {
         animate={{
           x: spotlightPos.x - 300,
           y: spotlightPos.y - 300,
-          opacity: isHovered ? 0.35 : 0,
+          opacity: isHovered ? 0.25 : 0,
         }}
         transition={{ type: "spring", damping: 30, stiffness: 220, mass: 0.4 }}
-        className="absolute w-[600px] h-[600px] rounded-full blur-[120px] pointer-events-none bg-radial from-indigo-500/20 via-cyan-400/10 to-transparent"
+        className="absolute w-[600px] h-[600px] rounded-full blur-[120px] pointer-events-none bg-radial from-indigo-400/25 via-cyan-300/10 to-transparent"
       />
 
-      {/* 6. Soft Deep Obsidian Vignette for High Content Contrast */}
-      <div className="absolute inset-0 bg-radial from-transparent via-[#060913]/25 to-[#060913]/85 pointer-events-none" />
+      {/* 6. Soft Vignette for High Content Contrast */}
+      <div className="absolute inset-0 bg-radial from-transparent via-transparent to-[#f6f7fb]/70 pointer-events-none" />
     </div>
   );
 }

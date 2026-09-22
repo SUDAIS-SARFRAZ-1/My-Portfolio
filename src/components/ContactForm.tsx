@@ -105,8 +105,8 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Name */}
         <div className="space-y-1.5">
-          <label htmlFor="contact-name" className="block text-xs font-semibold text-slate-300">
-            Your Name <span className="text-indigo-400">*</span>
+          <label htmlFor="contact-name" className="block text-xs font-semibold text-slate-600">
+            Your Name <span className="text-indigo-600">*</span>
           </label>
           <input
             id="contact-name"
@@ -116,17 +116,17 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Jane Doe"
-            className={`w-full px-3.5 py-2.5 rounded-xl bg-slate-950/70 text-white placeholder:text-slate-500 text-sm border transition-colors ${
-              errors.name ? "border-rose-500 bg-rose-950/20" : "border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+            className={`w-full px-3.5 py-2.5 rounded-xl bg-slate-50 text-slate-900 placeholder:text-slate-400 text-sm border transition-colors ${
+              errors.name ? "border-rose-400 bg-rose-50" : "border-slate-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
             } focus-visible:outline-none`}
           />
-          {errors.name && <p className="text-xs text-rose-400">{errors.name}</p>}
+          {errors.name && <p className="text-xs text-rose-600">{errors.name}</p>}
         </div>
 
         {/* Email */}
         <div className="space-y-1.5">
-          <label htmlFor="contact-email" className="block text-xs font-semibold text-slate-300">
-            Your Email <span className="text-indigo-400">*</span>
+          <label htmlFor="contact-email" className="block text-xs font-semibold text-slate-600">
+            Your Email <span className="text-indigo-600">*</span>
           </label>
           <input
             id="contact-email"
@@ -136,17 +136,17 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder="jane@example.com"
-            className={`w-full px-3.5 py-2.5 rounded-xl bg-slate-950/70 text-white placeholder:text-slate-500 text-sm border transition-colors ${
-              errors.email ? "border-rose-500 bg-rose-950/20" : "border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+            className={`w-full px-3.5 py-2.5 rounded-xl bg-slate-50 text-slate-900 placeholder:text-slate-400 text-sm border transition-colors ${
+              errors.email ? "border-rose-400 bg-rose-50" : "border-slate-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
             } focus-visible:outline-none`}
           />
-          {errors.email && <p className="text-xs text-rose-400">{errors.email}</p>}
+          {errors.email && <p className="text-xs text-rose-600">{errors.email}</p>}
         </div>
       </div>
 
       {/* Inquiry Type */}
       <div className="space-y-1.5">
-        <label htmlFor="contact-intent" className="block text-xs font-semibold text-slate-300">
+        <label htmlFor="contact-intent" className="block text-xs font-semibold text-slate-600">
           Inquiry Type (Optional)
         </label>
         <select
@@ -154,20 +154,20 @@ export default function ContactForm() {
           name="intent"
           value={formData.intent}
           onChange={handleChange}
-          className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950/70 text-slate-200 text-sm border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus-visible:outline-none"
+          className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 text-slate-700 text-sm border border-slate-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus-visible:outline-none"
         >
-          <option value="job" className="bg-slate-900 text-white">Job Opportunity (Full-Time / Contract)</option>
-          <option value="freelance" className="bg-slate-900 text-white">Freelance Project</option>
-          <option value="aptiscript" className="bg-slate-900 text-white">AptiScript Inquiry (Team Software Development)</option>
-          <option value="collaboration" className="bg-slate-900 text-white">Collaboration / Open Source</option>
-          <option value="other" className="bg-slate-900 text-white">Other</option>
+          <option value="job">Job Opportunity (Full-Time / Contract)</option>
+          <option value="freelance">Freelance Project</option>
+          <option value="aptiscript">AptiScript Inquiry (Team Software Development)</option>
+          <option value="collaboration">Collaboration / Open Source</option>
+          <option value="other">Other</option>
         </select>
       </div>
 
       {/* Message */}
       <div className="space-y-1.5">
-        <label htmlFor="contact-message" className="block text-xs font-semibold text-slate-300">
-          Message <span className="text-indigo-400">*</span>
+        <label htmlFor="contact-message" className="block text-xs font-semibold text-slate-600">
+          Message <span className="text-indigo-600">*</span>
         </label>
         <textarea
           id="contact-message"
@@ -177,24 +177,24 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           placeholder="Please share details about your team, role, or project..."
-          className={`w-full px-3.5 py-2.5 rounded-xl bg-slate-950/70 text-white placeholder:text-slate-500 text-sm border transition-colors resize-y ${
-            errors.message ? "border-rose-500 bg-rose-950/20" : "border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+          className={`w-full px-3.5 py-2.5 rounded-xl bg-slate-50 text-slate-900 placeholder:text-slate-400 text-sm border transition-colors resize-y ${
+            errors.message ? "border-rose-400 bg-rose-50" : "border-slate-200 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
           } focus-visible:outline-none`}
         />
-        {errors.message && <p className="text-xs text-rose-400">{errors.message}</p>}
+        {errors.message && <p className="text-xs text-rose-600">{errors.message}</p>}
       </div>
 
       {/* Feedback status messages */}
       {status === "success" && (
-        <div className="p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
-          <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-400" />
+        <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs flex items-center gap-2">
+          <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
           <span>{responseMsg}</span>
         </div>
       )}
 
       {status === "error" && (
-        <div className="p-3.5 rounded-xl bg-rose-950/40 border border-rose-500/30 text-rose-300 text-xs flex items-center gap-2">
-          <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
+        <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-center gap-2">
+          <AlertCircle className="w-4 h-4 shrink-0 text-rose-600" />
           <span>{responseMsg}</span>
         </div>
       )}
@@ -203,7 +203,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="btn-tactile w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl shadow-lg shadow-indigo-600/30 transition-all focus-visible:ring-2 focus-visible:ring-indigo-400"
+        className="btn-tactile w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl shadow-lg shadow-indigo-600/30 transition-all focus-visible:ring-2 focus-visible:ring-indigo-400"
       >
         {status === "submitting" ? (
           <>

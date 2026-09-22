@@ -10,11 +10,13 @@ import AptiScriptCallout from "@/components/AptiScriptCallout";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import InteractiveTechBackground from "@/components/InteractiveTechBackground";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 flex flex-col antialiased relative">
       <InteractiveTechBackground />
+      <ScrollProgress />
       <Navbar />
       <main id="main-content" className="flex-1 relative z-10">
         <Hero />
